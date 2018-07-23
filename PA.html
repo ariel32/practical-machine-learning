@@ -134,12 +134,14 @@ $(document).ready(function () {
 </div>
 <div id="loading-libraries-and-data" class="section level1">
 <h1>Loading libraries and data:</h1>
-<pre class="r"><code>library(&quot;caret&quot;); library(&quot;rpart&quot;); library(&quot;rpart.plot&quot;); library(&quot;randomForest&quot;)</code></pre>
-<pre class="r"><code>if (!file.exists(&quot;./data&quot;)) { dir.create(&quot;./data&quot;) }
-download.file(&quot;https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv&quot;,
+<pre class="r"><code>library(&quot;caret&quot;); library(&quot;randomForest&quot;)</code></pre>
+<pre class="r"><code>if (!file.exists(&quot;./data&quot;)) {
+  dir.create(&quot;./data&quot;)
+  download.file(&quot;https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv&quot;,
               destfile = &quot;./data/pml-training.csv&quot;,mode=&quot;wb&quot;)
-download.file(&quot;https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv&quot;,
-              destfile = &quot;./data/pml-testing.csv&quot;,mode=&quot;wb&quot;)</code></pre>
+  download.file(&quot;https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv&quot;,
+              destfile = &quot;./data/pml-testing.csv&quot;,mode=&quot;wb&quot;)
+  }</code></pre>
 </div>
 <div id="set-seed-for-reproduceability" class="section level1">
 <h1>Set seed for Reproduceability:</h1>
